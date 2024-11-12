@@ -1,4 +1,4 @@
-# Weather Notifier
+# Alerta Clima (Weather Notifier)
 
 ## Objetivo
 
@@ -97,6 +97,56 @@ Para proteger credenciais, como API_KEY e EMAIL_PASSWORD usamos um arquivo .env 
 
 Esses passos protegem suas variáveis sensíveis, mantendo-as fora do código e do repositório.
 
+## Como executar o software
+
+**Como Executar**
+
+Aqui descrevemos como configurar e executar o projeto Alerta Clima para enviar notificações de clima personalizadas via e-mail.
+
+### 1. Pré-requisitos
+
+- **Python** >= 3.10 instalado
+- **Bibliotecas**: Instale as bibliotecas necessárias com o seguinte comando:
+- 
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- **Configuração do .env**: Crie um arquivo `.env` na raiz do projeto e adicione as variáveis sensíveis, como `API_KEY` e `EMAIL_PASSWORD`, para garantir segurança e fácil configuração.
+
+### 2. Configuração do Projeto
+
+- **Arquivo de Configuração** (`config/settings.py`): Verifique se as configurações no arquivo `settings.py` estão corretas, especialmente as que indicam os caminhos dos templates de e-mail, arquivos de usuários e a URL da API de clima.
+  
+- **Arquivo de Usuários** (`users.json`): No diretório configurado, crie um arquivo `users.json` no seguinte formato para especificar os destinatários:
+  
+  ```json
+  {
+    "users": [
+      { "nome": "Nome do Usuário", "email": "email@exemplo.com" },
+      ...
+    ]
+  }
+  ```
+
+- **Arquivo Template de E-mail** (`email_template.json`): Este arquivo define o formato e o conteúdo dos e-mails.
+  
+
+### 3. Execução do Projeto
+
+1. **Obter Dados da API e Enviar E-mails**:
+   Para iniciar a automação de envio de e-mails com as informações climáticas, execute:
+  
+   ```bash
+   python main.py
+   ```
+
+2. **Verificar Saída**: Os e-mails serão enviados para os usuários configurados no `users.json`, e mensagens de log no terminal indicarão o status de cada envio.
+
+### 4. Dicas Adicionais
+
+- **Agendamento Automático**: Para enviar as notificações automaticamente em horários específicos, utilize uma ferramenta como `cron` no Linux ou o Agendador de Tarefas no Windows.
+  
 
 -----------------------
 

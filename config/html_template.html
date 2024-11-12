@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; margin: 0; padding: 0; background-color: #e9ecef00; }
+        .weather-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ccc; /* Borda cinza ao redor do visual */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 300px;
+        }
+        .city { 
+            font-size: 24px; 
+            font-weight: bold; 
+            color: #333; 
+            margin-bottom: 5px;
+        }
+        .date { 
+            font-size: 18px; 
+            color: #666; 
+            margin-bottom: 10px; 
+        }
+        
+        /* Ajuste das linhas de indicadores */
+        .weather-section {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        /* Ajuste para os itens de cada seção */
+        .weather-item {
+            text-align: center;
+            font-size: 16px;
+            margin: 0 10px;
+            flex: 1;
+        }
+        .icon { font-size: 36px; margin-bottom: 8px; }
+        .temp { font-size: 24px; font-weight: bold; color: #333; margin: 5px 0; }
+        .label { font-size: 14px; color: #666; margin-top: 5px; }
+        .highlight { color: #007bff; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <div class="header">
+            <div class="city">{{ city }}</div>
+            <div class="date">{{ date }}</div>
+            <div class="temp">{{ temp }} °C</div>
+            <div class="highlight">{{ description }}</div>
+            <div class="label">Condição Atual</div>
+        </div>
+
+
+        <!-- Linha 1 -->
+        <div class="weather-section">
+            <div class="weather-item">
+                <!-- Linha 1 -->
+                <div class="icon">🌡️</div>
+                <div class="temp">{{ max_temp }} °C</div>
+                <div class="label">Máxima</div>
+                <!-- Linha 2 -->
+                <div class="icon">🌡️</div>
+                <div class="temp">{{ min_temp }} °C</div>
+                <div class="label">Mínima</div>
+            </div>
+            <div class="weather-item">
+                <!-- Linha 1 -->
+                <div class="icon">☔️</div>
+                <div class="temp">{{ rain_probability }} %</div>
+                <div class="label">% Chuva</div>
+                <!-- Linha 2 -->
+                <div class="icon">🌧️</div>
+                <div class="temp">{{ rain }} mm</div>
+                <div class="label">Chuva</div>
+            </div>
+            <div class="weather-item">
+                <!-- Linha 1 -->
+                <div class="icon">💨</div>
+                <div class="temp">{{ wind_speed }}</div>
+                <div class="label">Vento</div>
+                <!-- Linha 2 -->
+                <div class="icon">🎏</div>
+                <div class="temp">{{ wind_cardinal }}</div>
+                <div class="label">Direção</div>
+            </div>
+            <div class="weather-item">
+                <!-- Linha 1 -->
+                <div class="icon">💧</div>
+                <div class="temp">{{ humidity }}%</div>
+                <div class="label">Umidade</div>    
+                <!-- Linha 2 -->
+                <div class="icon">🌫️</div>
+                <div class="temp">{{ cloudiness }}%</div>
+                <div class="label">Nebulosidade</div>
+            </div>
+            <div class="weather-item">
+                <!-- Linha 1 -->
+                <div class="icon">🌅</div>
+                <div class="temp">{{ sunrise }}</div>
+                <div class="label">Nascer do Sol</div>    
+                <!-- Linha 2 -->
+                <div class="icon">🌄</div>
+                <div class="temp">{{ sunset }}</div>
+                <div class="label">Por do Sol</div>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center; color: #555;"> Atualizado às {{ time }}h</p>
+</body>
+</html>

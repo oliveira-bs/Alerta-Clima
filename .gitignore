@@ -1,0 +1,5 @@
+.pytest_cache
+env_weather_notifier
+weather_notifier/__pycache__
+config/__pycache__
+.env

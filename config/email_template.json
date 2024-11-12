@@ -1,0 +1,6 @@
+{
+    "subject": "Notificação do Clima - {date}",
+    "header": "Olá, {nome}!\n\nPrevisão do clima para hoje, {date}:\n\n",
+    "body": "{city}: {currently}\n- Temperatura Agora: {temp}°C\n- Temperatura Máxima: {max}°C\n- Temperatura Mínima: {min}°C\n- Descrição: {description}\n- Umidade: {humidity}%\n- Chuva: {rain} mm\n- Vento: {wind_speedy}\n- Fase da Lua: {moon_phase}\n\n",
+    "footer": "\n\nTenha um bom dia!\n\nAtualizado às {time}h"
+}

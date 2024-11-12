@@ -1,0 +1,13 @@
+{
+    "cities": [
+      {"name": "Vassouras", "state": "RJ"},
+      {"name": "Barra do Piraí", "state": "RJ"},
+      {"name": "Valença", "state": "RJ"},
+      {"name": "Rio das Flores", "state": "RJ"},
+      {"name": "Paraíba do Sul", "state": "RJ"},
+      {"name": "Miguel Pereira", "state": "RJ"},
+      {"name": "Paty dos Alferes", "state": "RJ"},
+      {"name": "Rio de Janeiro", "state": "RJ"}
+    ]
+  }
+  
